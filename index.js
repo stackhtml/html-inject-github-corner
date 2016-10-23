@@ -64,7 +64,7 @@ function ghCornerify (opts) {
   opts.side = opts.side === 'left' ? 'left' : 'right';
   opts.bg = opts.bg === undefined ? '#333' : opts.bg;
   opts.fg = opts.fg === undefined ? '#fff' : opts.fg;
-  opts.zindex = opts.zindex === undefined ? 0 : parseInt(opts.zindex);
+  opts.zindex = opts.zindex === undefined ? 10000 : parseInt(opts.zindex);
   opts.class = opts.class === undefined ? 'github-corner' : opts.class;
 
   if (typeof opts.url !== 'string') {
