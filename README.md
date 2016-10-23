@@ -68,7 +68,7 @@ This creates a through stream that transforms html to include a github corner. T
 
 ### License
 
-&copy; 2016 Ricky Reusser. MIT License. Original assets are adapted from [https://github.com/tholman/github-corners/blob/master/license.md](tholman/github-corners). See [LICENSE](LICENSE) for more details.
+&copy; 2016 Ricky Reusser. MIT License. Original assets are adapted from [tholman/github-corners](https://github.com/tholman/github-corners/blob/master/license.md). See [LICENSE](https://github.com/rreusser/github-cornerify/blob/master/LICENSE.md) for more details.
 
 
 <!-- BADGES -->
