@@ -2,6 +2,16 @@
 
 > Add a Github corner to a stream of html
 
+[![Build Status][travis-image]][travis-url]
+[![npm version][npm-image]][npm-url]
+[![Dependency Status][david-dm-image]][david-dm-url]
+[![Semistandard Style][semistandard-image]][semistandard-url]
+[![unstable][stability-unstable]][stability-url]
+
+### Introduction
+
+Tim Holman's [Github Corners](https://github.com/tholman/github-corners/) are great! This is a quick way to avoid having to copy/paste them by hand. 😀
+
 ### Installation
 
 ```bash
@@ -14,8 +24,7 @@ This tool works great with [indexhtmlify](https://github.com/dominictarr/indexht
 
 ```bash
 $ browserify index.js | indexhtmlify | metadataify | github-cornerify > index.html
-```
-
+``` 
 ### Usage
 
 This tools takes a stream of html and transforms it to include a github corner.
@@ -51,6 +60,36 @@ This creates a through stream that transforms html to include a github corner. T
 
 **Returns**: A through stream that appends CSS into the head tag and prepends the github corner to the HTML.
 
+### See Also
+
+- [github-corners](https://github.com/tholman/github-corners/)
+- [indexhtmlify](https://github.com/dominictarr/indexhtmlify)
+- [metadataify](https://github.com/rreusser/metadataify)
+
 ### License
 
 &copy; 2016 Ricky Reusser. MIT License. Original assets are adapted from [https://github.com/tholman/github-corners/blob/master/license.md](tholman/github-corners). See [LICENSE](LICENSE) for more details.
+
+
+<!-- BADGES -->
+
+[travis-image]: https://travis-ci.org/rreusser/github-cornerify.svg?branch=master
+[travis-url]: https://travis-ci.org//github-cornerify
+
+[npm-image]: https://badge.fury.io/js/github-cornerify.svg
+[npm-url]: https://npmjs.org/package/github-cornerify
+
+[david-dm-image]: https://david-dm.org/rreusser/github-cornerify.svg?theme=shields.io
+[david-dm-url]: https://david-dm.org/rreusser/github-cornerify
+
+[semistandard-image]: https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square
+[semistandard-url]: https://github.com/Flet/semistandard
+
+<!-- see stability badges at: https://github.com/badges/stability-badges -->
+[stability-url]: https://github.com/badges/stability-badges
+[stability-deprecated]: http://badges.github.io/stability-badges/dist/deprecated.svg
+[stability-experimental]: http://badges.github.io/stability-badges/dist/experimental.svg
+[stability-unstable]: http://badges.github.io/stability-badges/dist/unstable.svg
+[stability-stable]: http://badges.github.io/stability-badges/dist/stable.svg
+[stability-frozen]: http://badges.github.io/stability-badges/dist/frozen.svg
+[stability-locked]: http://badges.github.io/stability-badges/dist/locked.svg
