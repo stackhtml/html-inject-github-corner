@@ -1,6 +1,6 @@
 {
   "name": "github-cornerify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Add a github corner to a stream of html",
   "main": "index.js",
   "bin": "cli.js",
@@ -31,17 +31,19 @@
     "repository"
   ],
   "dependencies": {
-    "chai": "^3.5.0",
     "hyperstream": "^1.2.2",
     "minimist": "^1.2.0",
-    "mocha": "^3.1.2",
     "pkg-up": "^1.0.0",
-    "semistandard": "^9.1.0",
     "stream-replace": "^1.0.0",
-    "stream-to-string": "^1.1.0",
-    "string-to-stream": "^1.1.0",
+    "wrap-stream": "^2.0.0",
     "uglifycss": "^0.0.25",
-    "wrap-stream": "^2.0.0"
+    "stream-to-string": "^1.1.0",
+    "string-to-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "semistandard": "^9.1.0"
   },
   "semistandard": {
     "globals": [
