@@ -24,8 +24,8 @@ function assetContent (filename) {
 
 function svgStream (opts) {
   return assetStream('github-corner-' + opts.side + '.svg')
-    .pipe(replace('#151513', opts.bg))
-    .pipe(replace('#fff', opts.fg));
+    .pipe(replace('BACKGROUND', opts.bg))
+    .pipe(replace('FOREGROUND', opts.fg));
 }
 
 function cssContent () {
@@ -62,7 +62,7 @@ function ghCornerify (opts) {
   opts = opts || {};
 
   opts.side = opts.side === 'left' ? 'left' : 'right';
-  opts.bg = opts.bg === undefined ? '#151513' : opts.bg;
+  opts.bg = opts.bg === undefined ? '#333' : opts.bg;
   opts.fg = opts.fg === undefined ? '#fff' : opts.fg;
   opts.zindex = opts.zindex === undefined ? 0 : parseInt(opts.zindex);
   opts.class = opts.class === undefined ? 'github-corner' : opts.class;
