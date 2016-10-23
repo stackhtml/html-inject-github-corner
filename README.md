@@ -74,7 +74,7 @@ This creates a through stream that transforms html to include a github corner. T
 <!-- BADGES -->
 
 [travis-image]: https://travis-ci.org/rreusser/github-cornerify.svg?branch=master
-[travis-url]: https://travis-ci.org//github-cornerify
+[travis-url]: https://travis-ci.org/rreusser/github-cornerify
 
 [npm-image]: https://badge.fury.io/js/github-cornerify.svg
 [npm-url]: https://npmjs.org/package/github-cornerify
