@@ -27,7 +27,7 @@ $ browserify index.js | indexhtmlify | metadataify | github-cornerify > index.ht
 ``` 
 ### Usage
 
-This tools takes a stream of html and transforms it to include a github corner.
+This tools takes a stream of html and transforms it to include a github corner. It looks first to direct options, then to the `repository` field of the nearest `package.json`, and finally will accept any of these options from a `github-corner` field in `package.json`.
 
 ```
 Options:
@@ -35,8 +35,7 @@ Options:
        --bg  Background color
        --fg  Foreground color
    --zindex  Z-index of corner
-      --url  Repository url (by default, looks at repository
-             url of nearest package.json
+      --url  Repository url (by default, looks at repository url of nearest package.json
      --side  Either "left" or "right"
     --class  CSS class for element. By default, "github-corner"
 

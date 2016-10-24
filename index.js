@@ -8,6 +8,7 @@ var uglifycss = require('uglifycss').processString;
 var toStream = require('string-to-stream');
 var wrap = require('wrap-stream');
 var pkgUp = require('pkg-up');
+var extend = require('extend');
 
 module.exports = ghCornerify;
 
@@ -59,7 +60,9 @@ function getPkg () {
 }
 
 function ghCornerify (opts) {
-  opts = opts || {};
+  var pkg = getPkg();
+
+  opts = extend(pkg['github-corner'] || {}, opts || {});
 
   opts.side = opts.side === 'left' ? 'left' : 'right';
   opts.bg = opts.bg === undefined ? '#333' : opts.bg;
