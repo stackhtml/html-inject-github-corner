@@ -8,7 +8,7 @@ var uglifycss = require('uglifycss').processString;
 var toStream = require('string-to-stream');
 var wrap = require('wrap-stream');
 var pkgUp = require('pkg-up');
-var extend = require('extend');
+var extend = require('util-extend');
 
 module.exports = ghCornerify;
 
