@@ -13,7 +13,7 @@ var extend = require('util-extend');
 module.exports = ghCornerify;
 
 var gitRepoRegex = /^git:\/\/github.com\/([^\/]*)\/([^\.]*)(\.git)?$/;
-var webRepoRegex = /^https?:\/\/(www\.)?github.com\/([^\/]*)\/([^\.]*)(\.git)?$/;
+var webRepoRegex = /^(git)?\+?(https?)?:\/\/(www\.)?github.com\/([^\/]*)\/([^\.]*)(\.git)?$/;
 
 function assetStream (filename) {
   return fs.createReadStream(path.join(__dirname, 'assets', filename));
@@ -38,7 +38,7 @@ function toCanonicalGitRepo (url) {
   if ((match = url.match(gitRepoRegex))) {
     return 'https://github.com/' + match[1] + '/' + match[2];
   } else if ((match = url.match(webRepoRegex))) {
-    return 'https://github.com/' + match[2] + '/' + match[3];
+    return 'https://github.com/' + match[4] + '/' + match[5];
   }
 }
 
