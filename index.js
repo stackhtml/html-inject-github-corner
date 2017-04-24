@@ -10,7 +10,7 @@ var wrap = require('wrap-stream');
 var pkgUp = require('pkg-up');
 var extend = require('util-extend');
 
-module.exports = ghCornerify;
+module.exports = htmlInjectGithubCorner;
 
 var gitRepoRegex = /^git:\/\/github.com\/([^\/]*)\/([^\.]*)(\.git)?$/;
 var webRepoRegex = /^(git)?\+?(https?)?:\/\/(www\.)?github.com\/([^\/]*)\/([^\.]*)(\.git)?$/;
@@ -59,7 +59,7 @@ function getPkg () {
   return pkgPath ? JSON.parse(fs.readFileSync(pkgPath).toString()) : undefined;
 }
 
-function ghCornerify (opts) {
+function htmlInjectGithubCorner (opts) {
   var pkg = getPkg();
 
   opts = extend(pkg['github-corner'] || {}, opts || {});
@@ -75,7 +75,7 @@ function ghCornerify (opts) {
   }
 
   if (!opts.url) {
-    throw new Error('Error: github-cornerify was unable to find a repository url');
+    throw new Error('Error: html-inject-github-corner was unable to find a repository url');
   }
 
   var svg = svgStream(opts)

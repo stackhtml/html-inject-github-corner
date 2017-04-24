@@ -1,5 +1,5 @@
 {
-  "name": "github-cornerify",
+  "name": "html-inject-github-corner",
   "version": "1.0.7",
   "description": "Add a github corner to a stream of html",
   "main": "index.js",
@@ -16,10 +16,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rreusser/github-cornerify.git"
+    "url": "git://github.com/rreusser/html-inject-github-corner.git"
   },
   "bugs": {
-    "url": "https://github.com/rreusser/github-cornerify/issues",
+    "url": "https://github.com/rreusser/html-inject-github-corner/issues",
     "email": "rsreusser@gmail.com"
   },
   "license": "MIT",
@@ -54,6 +54,6 @@
     ]
   },
   "github-corner": {
-    "url": "https://github.com/rreusser/github-cornerify"
+    "url": "https://github.com/rreusser/html-inject-github-corner"
   }
 }

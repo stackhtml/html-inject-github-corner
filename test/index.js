@@ -1,6 +1,6 @@
 'use strict';
 
-var cornerify = require('../');
+var injectGithubCorner = require('../');
 var assert = require('chai').assert;
 var toString = require('stream-to-string');
 var fs = require('fs');
@@ -21,12 +21,12 @@ function assertStreamsEqual (computedStream, expectedStream) {
 
 function compare (inFixture, outFixture, changes) {
   return assertStreamsEqual(
-    fixture(inFixture).pipe(cornerify(changes)),
+    fixture(inFixture).pipe(injectGithubCorner(changes)),
     fixture(outFixture)
   );
 }
 
-describe('github-cornerify', function () {
+describe('html-inject-github-corner', function () {
   it('adds a corner in the left', function (done) {
     compare('input/index.html', 'output/left.html', {
       bg: 'red',

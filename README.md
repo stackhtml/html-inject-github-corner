@@ -1,4 +1,4 @@
-# github-cornerify
+# html-inject-github-corner
 
 > Add a Github corner to a stream of html
 
@@ -15,15 +15,15 @@ Tim Holman's [Github Corners](https://github.com/tholman/github-corners/) are gr
 ### Installation
 
 ```bash
-$ npm install github-cornerify
+$ npm install html-inject-github-corner
 ```
 
 ### Example
 
-This tool works great with [indexhtmlify](https://github.com/dominictarr/indexhtmlify) and [metadataify](https://github.com/rreusser/metadataify). For example:
+This tool works great with [indexhtmlify](https://github.com/dominictarr/indexhtmlify) and [html-inject-meta](https://github.com/rreusser/html-inject-meta). For example:
 
 ```bash
-$ browserify index.js | indexhtmlify | metadataify | github-cornerify > index.html
+$ browserify index.js | indexhtmlify | html-inject-meta | html-inject-github-corner > index.html
 ``` 
 ### Usage
 
@@ -39,14 +39,14 @@ Options:
      --side  Either "left" or "right"
     --class  CSS class for element. By default, "github-corner"
 
-  $ browserify index.js | indexhtmlify | metadataify | github-cornerify > index.html
+  $ browserify index.js | indexhtmlify | html-inject-meta | html-inject-github-corner > index.html
 ```
 
 ### API
 
 This can also be used as a through stream:
 
-#### `require('github-cornerify')([opts])`
+#### `require('html-inject-github-corner')([opts])`
 
 This creates a through stream that transforms html to include a github corner. The options are exactly the same as for the command line version:
 
@@ -63,23 +63,23 @@ This creates a through stream that transforms html to include a github corner. T
 
 - [github-corners](https://github.com/tholman/github-corners/)
 - [indexhtmlify](https://github.com/dominictarr/indexhtmlify)
-- [metadataify](https://github.com/rreusser/metadataify)
+- [html-inject-meta](https://github.com/rreusser/html-inject-meta)
 
 ### License
 
-&copy; 2016 Ricky Reusser. MIT License. Original assets are adapted from [tholman/github-corners](https://github.com/tholman/github-corners). See [LICENSE](https://github.com/rreusser/github-cornerify/blob/master/LICENSE) for more details.
+&copy; 2016 Ricky Reusser. MIT License. Original assets are adapted from [tholman/github-corners](https://github.com/tholman/github-corners). See [LICENSE](https://github.com/rreusser/html-inject-github-corner/blob/master/LICENSE) for more details.
 
 
 <!-- BADGES -->
 
-[travis-image]: https://travis-ci.org/rreusser/github-cornerify.svg?branch=master
-[travis-url]: https://travis-ci.org/rreusser/github-cornerify
+[travis-image]: https://travis-ci.org/rreusser/html-inject-github-corner.svg?branch=master
+[travis-url]: https://travis-ci.org/rreusser/html-inject-github-corner
 
-[npm-image]: https://badge.fury.io/js/github-cornerify.svg
-[npm-url]: https://npmjs.org/package/github-cornerify
+[npm-image]: https://badge.fury.io/js/html-inject-github-corner.svg
+[npm-url]: https://npmjs.org/package/html-inject-github-corner
 
-[david-dm-image]: https://david-dm.org/rreusser/github-cornerify.svg?theme=shields.io
-[david-dm-url]: https://david-dm.org/rreusser/github-cornerify
+[david-dm-image]: https://david-dm.org/rreusser/html-inject-github-corner.svg?theme=shields.io
+[david-dm-url]: https://david-dm.org/rreusser/html-inject-github-corner
 
 [semistandard-image]: https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square
 [semistandard-url]: https://github.com/Flet/semistandard
