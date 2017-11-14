@@ -1,6 +1,6 @@
 .github-corner {
   display: block;
-  position: absolute;
+  position: $POSITION;
   top: 0;
   left: $LEFT;
   right: $RIGHT;

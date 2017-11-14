@@ -1,13 +1,14 @@
-'use strict';
+'use strict'
 
-var injectGithubCorner = require('../');
-var assert = require('chai').assert;
-var toString = require('stream-to-string');
-var fs = require('fs');
-var path = require('path');
+var injectGithubCorner = require('../')
+var toString = require('stream-to-string')
+var assert = require('assert')
+var fs = require('fs')
+var path = require('path')
+var test = require('tape')
 
 function fixture (name) {
-  return fs.createReadStream(path.join(__dirname, 'fixtures', name));
+  return fs.createReadStream(path.join(__dirname, 'fixtures', name))
 }
 
 function assertStreamsEqual (computedStream, expectedStream) {
@@ -15,42 +16,74 @@ function assertStreamsEqual (computedStream, expectedStream) {
     toString(computedStream),
     toString(expectedStream)
   ]).then(function (values) {
-    assert.equal(values[0], values[1]);
-  });
+    assert.equal(values[0], values[1])
+  })
 }
 
-function compare (inFixture, outFixture, changes) {
+function compare (inFixture, outFixture, config) {
   return assertStreamsEqual(
-    fixture(inFixture).pipe(injectGithubCorner(changes)),
+    fixture(inFixture).pipe(injectGithubCorner(config)),
     fixture(outFixture)
-  );
+  )
 }
 
-describe('html-inject-github-corner', function () {
-  it('adds a corner in the left', function (done) {
-    compare('input/index.html', 'output/left.html', {
-      bg: 'red',
-      fg: 'green',
-      side: 'right',
-      class: 'foo',
-      zindex: 1234,
-      url: 'http://example.com'
-    }).then(done, done);
-  });
+test('adds a corner in the left', function (t) {
+  compare('input/index.html', 'output/left.html', {
+    bg: 'red',
+    fg: 'green',
+    side: 'right',
+    class: 'foo',
+    position: 'fixed',
+    zindex: 1234,
+    repository: 'http://example.com'
+  }).then(t.end, t.end)
+})
 
-  it('adds a corner in the right', function (done) {
-    compare('input/index.html', 'output/right.html', {
-      bg: 'red',
-      fg: 'green',
-      side: 'right',
-      class: 'foo',
-      zindex: 1234,
-      url: 'http://example.com'
-    }).then(done, done);
-  });
+test('adds a corner in the right', function (t) {
+  compare('input/index.html', 'output/right.html', {
+    bg: 'red',
+    fg: 'green',
+    side: 'right',
+    class: 'foo',
+    zindex: 1234,
+    repository: 'http://example.com'
+  }).then(t.end, t.end)
+})
 
-  it('looks to package.json for the repo', function (done) {
-    compare('input/index.html', 'output/default-url.html', {}).then(done, done);
-  });
-});
+test('looks to package.json for the repo', function (t) {
+  compare('input/index.html', 'output/default-url.html', {}).then(t.end, t.end)
+})
 
+test('allows github ssh urls', function (t) {
+  compare('input/index.html', 'output/github-shortcut-url.html', {
+    repository: {
+      url: 'git@github.com/foo/bar'
+    }
+  }).then(t.end, t.end)
+})
+
+test('uses a github shortcut url', function (t) {
+  compare('input/index.html', 'output/github-shortcut-url.html', {
+    repository: 'foo/bar'
+  }).then(t.end, t.end)
+})
+
+test('allows pkg-style nested repository', function (t) {
+  compare('input/index.html', 'output/github-shortcut-url.html', {
+    repository: {
+      url: 'foo/bar'
+    }
+  }).then(t.end, t.end)
+})
+
+test('uses a gist url', function (t) {
+  compare('input/index.html', 'output/gist-url.html', {
+    repository: 'gist:foo/bar'
+  }).then(t.end, t.end)
+})
+
+test('uses a custom url', function (t) {
+  compare('input/index.html', 'output/custom-url.html', {
+    repository: 'https://foo.com/bar'
+  }).then(t.end, t.end)
+})

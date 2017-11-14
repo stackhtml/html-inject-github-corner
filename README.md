@@ -53,7 +53,7 @@ This creates a through stream that transforms html to include a github corner. T
 - `bg`: A valid CSS color for the triangular background
 - `fg`: A valid CSS color for the octocat foreground
 - `zindex`: The z-index of the corner. Default is 10000.
-- `url`: A url to use in the link. If not provided, the nearest `package.json` will be located and analyzed. The `repository.url` field will be used and will be transformed to a web url—that is, the `git://` protocol is fine here. (Note: `git@github.com/...` is not yet implemented)
+- `repository`: A url to use in the link. Follows the format of the `package.json` `repository` field. If not provided, the nearest `package.json` will be located and analyzed. Within reason, will transformed to a web url.
 - `side`: `'left' | 'right'`. Default side for the link is the right side.
 - `class`: An optional CSS class for the element. Default is `.github-corner`.
 
