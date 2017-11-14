@@ -1,6 +1,6 @@
 {
   "name": "html-inject-github-corner",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Add a github corner to a stream of html",
   "main": "index.js",
   "bin": "cli.js",
