@@ -68,6 +68,12 @@ test('uses a github shortcut url', function (t) {
   }).then(t.end, t.end)
 })
 
+test('accepts deprectated `url`', function (t) {
+  compare('input/index.html', 'output/github-shortcut-url.html', {
+    url: 'foo/bar'
+  }).then(t.end, t.end)
+})
+
 test('allows pkg-style nested repository', function (t) {
   compare('input/index.html', 'output/github-shortcut-url.html', {
     repository: {

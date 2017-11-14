@@ -59,7 +59,7 @@ function htmlInjectGithubCorner (opts) {
   opts.zindex = opts.zindex === undefined ? 10000 : parseInt(opts.zindex)
   opts.class = opts.class === undefined ? 'github-corner' : opts.class
 
-  var url = getRepoUrl(opts.repository || pkg.repository)
+  var url = getRepoUrl(opts.repository || opts.url || pkg.repository)
 
   if (!url) {
     throw new Error('Error: html-inject-github-corner was unable to find a repository url')
