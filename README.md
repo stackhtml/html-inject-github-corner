@@ -69,19 +69,19 @@ This creates a through stream that transforms html to include a github corner. T
 
 ### License
 
-&copy; 2016 Ricky Reusser. MIT License. Original assets are adapted from [tholman/github-corners](https://github.com/tholman/github-corners). See [LICENSE](https://github.com/rreusser/html-inject-github-corner/blob/master/LICENSE) for more details.
+&copy; 2016 Ricky Reusser. MIT License. Original assets are adapted from [tholman/github-corners](https://github.com/tholman/github-corners). See [LICENSE](https://github.com/stackhtml/html-inject-github-corner/blob/master/LICENSE) for more details.
 
 
 <!-- BADGES -->
 
-[travis-image]: https://travis-ci.org/rreusser/html-inject-github-corner.svg?branch=master
-[travis-url]: https://travis-ci.org/rreusser/html-inject-github-corner
+[travis-image]: https://travis-ci.org/stackhtml/html-inject-github-corner.svg?branch=master
+[travis-url]: https://travis-ci.org/stackhtml/html-inject-github-corner
 
 [npm-image]: https://badge.fury.io/js/html-inject-github-corner.svg
 [npm-url]: https://npmjs.org/package/html-inject-github-corner
 
-[david-dm-image]: https://david-dm.org/rreusser/html-inject-github-corner.svg?theme=shields.io
-[david-dm-url]: https://david-dm.org/rreusser/html-inject-github-corner
+[david-dm-image]: https://david-dm.org/stackhtml/html-inject-github-corner.svg?theme=shields.io
+[david-dm-url]: https://david-dm.org/stackhtml/html-inject-github-corner
 
 [standard-badge]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [standard-url]: https://github.com/feross/standard

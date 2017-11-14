@@ -1,6 +1,6 @@
 {
   "name": "html-inject-github-corner",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "Add a github corner to a stream of html",
   "main": "index.js",
   "bin": "cli.js",
@@ -16,10 +16,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rreusser/html-inject-github-corner.git"
+    "url": "git://github.com/stackhtml/html-inject-github-corner.git"
   },
   "bugs": {
-    "url": "https://github.com/rreusser/html-inject-github-corner/issues",
+    "url": "https://github.com/stackhtml/html-inject-github-corner/issues",
     "email": "rsreusser@gmail.com"
   },
   "license": "MIT",
@@ -47,6 +47,6 @@
     "tape": "^4.8.0"
   },
   "github-corner": {
-    "url": "https://github.com/rreusser/html-inject-github-corner"
+    "url": "https://github.com/stackhtml/html-inject-github-corner"
   }
 }
