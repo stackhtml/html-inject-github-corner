@@ -56,7 +56,7 @@ function htmlInjectGithubCorner (opts) {
   opts.bg = opts.bg === undefined ? '#333' : opts.bg
   opts.fg = opts.fg === undefined ? '#fff' : opts.fg
   opts.position = opts.position === undefined ? 'absolute' : opts.position
-  opts.zindex = opts.zindex === undefined ? 10000 : parseInt(opts.zindex)
+  opts.zIndex = (opts.zIndex || opts.zindex || opts['z-index']) === undefined ? 10000 : parseInt(opts.zIndex || opts.zindex || opts['z-index'])
   opts.class = opts.class === undefined ? 'github-corner' : opts.class
 
   var url = getRepoUrl(opts.repository || opts.url || pkg.repository)
@@ -71,7 +71,7 @@ function htmlInjectGithubCorner (opts) {
   var css = toStream(uglifycss(fs.readFileSync(path.join(__dirname, 'assets', 'styles.css')).toString()))
     .pipe(replace('$LEFT', opts.side === 'left' ? '0' : 'auto'))
     .pipe(replace('$RIGHT', opts.side === 'left' ? 'auto' : '0'))
-    .pipe(replace('$ZINDEX', opts.zindex))
+    .pipe(replace('$ZINDEX', opts.zIndex))
     .pipe(replace('$POSITION', opts.position))
     .pipe(replace(/\.github-corner/g, '.' + opts.class))
     .pipe(wrap('<style type="text/css">', '</style>'))

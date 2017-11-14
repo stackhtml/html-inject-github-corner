@@ -17,7 +17,7 @@ function printUsageAndExit () {
   console.error('       --help  Display this message and exit')
   console.error('         --bg  Background color')
   console.error('         --fg  Foreground color')
-  console.error('     --zindex  CSS z-index of corner')
+  console.error('    --z-index  CSS z-index of corner')
   console.error('   --position  CSS position of corner (default: \'absolute\')')
   console.error('      --class  CSS class for element. By default, "github-corner"')
   console.error('        --url  Repository url (by default, looks at repository')
