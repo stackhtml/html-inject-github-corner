@@ -37,7 +37,7 @@
     "pkg-up": "^1.0.0",
     "stream-replace": "^1.0.0",
     "stream-to-string": "^1.1.0",
-    "uglifycss": "^0.0.25",
+    "uglifycss": "0.0.27",
     "util-extend": "^1.0.3",
     "wrap-stream": "^2.0.0"
   },

@@ -5,7 +5,7 @@
 [![Build Status][travis-image]][travis-url]
 [![npm version][npm-image]][npm-url]
 [![Dependency Status][david-dm-image]][david-dm-url]
-[![Semistandard Style][semistandard-image]][semistandard-url]
+[![Standard Style][standard-badge]][standard-url]
 [![unstable][stability-unstable]][stability-url]
 
 ### Introduction
@@ -81,8 +81,8 @@ This creates a through stream that transforms html to include a github corner. T
 [david-dm-image]: https://david-dm.org/rreusser/html-inject-github-corner.svg?theme=shields.io
 [david-dm-url]: https://david-dm.org/rreusser/html-inject-github-corner
 
-[semistandard-image]: https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square
-[semistandard-url]: https://github.com/Flet/semistandard
+[standard-badge]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
+[standard-url]: https://github.com/feross/standard
 
 <!-- see stability badges at: https://github.com/badges/stability-badges -->
 [stability-url]: https://github.com/badges/stability-badges
