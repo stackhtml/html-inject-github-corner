@@ -34,10 +34,11 @@ Options:
      --help  Display this message and exit
        --bg  Background color
        --fg  Foreground color
-   --zindex  Z-index of corner
+  --z-index  CSS z-index of corner (default: 10000)
+ --position  CSS position of corner (default: 'absolute')
+    --class  CSS class for element (default: 'github-corner')
       --url  Repository url (by default, looks at repository url of nearest package.json
      --side  Either "left" or "right"
-    --class  CSS class for element. By default, "github-corner"
 
   $ browserify index.js | indexhtmlify | html-inject-meta | html-inject-github-corner > index.html
 ```
@@ -52,7 +53,8 @@ This creates a through stream that transforms html to include a github corner. T
 
 - `bg`: A valid CSS color for the triangular background
 - `fg`: A valid CSS color for the octocat foreground
-- `zindex`: The z-index of the corner. Default is 10000.
+- `zIndex`: The z-index of the corner. Default is `10000`.
+- `position`: The CSS position of the corner. Default is `'absolute'`.
 - `repository`: A url to use in the link. Follows the format of the `package.json` `repository` field. If not provided, the nearest `package.json` will be located and analyzed. Within reason, will transformed to a web url.
 - `side`: `'left' | 'right'`. Default side for the link is the right side.
 - `class`: An optional CSS class for the element. Default is `.github-corner`.
